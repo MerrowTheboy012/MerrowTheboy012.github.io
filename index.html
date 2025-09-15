@@ -310,13 +310,13 @@
         .about-text {
             flex: 1;
         }
-        
+        .about-content{
+            display: flex;
+            align-items: flex-start;/*align items to top*?/
+            gap:2rem; /*Add spacing between text and image*/
         .about-image {
-            flex: 1;
-            border-radius: var(--radius);
-            overflow: hidden;
-            box-shadow: var();
-            transition: var(--transition);
+            width: 280px;
+            flex-shrink: 0;
         }
         
         .about-image:hover {
@@ -324,16 +324,20 @@
         }
         
         .about-image img {
-            width: 75%;
-            height: auto;
-            display: block;
-            transition: transform 0.5s;
+          width: 100%;
+             height: auto;
+             border-radius: var(--radius);
+             box-shadow: var(--shadow);
         }
         
         .about-image:hover img {
             transform: scale(1.03);
         }
-        
+          /* For mobile responsiveness */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+    }
         /* Skills Section */
         .skills-container {
             display: grid;
@@ -1823,6 +1827,7 @@
     </script>
 </body>
 </html>
+
 
 
 
