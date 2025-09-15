@@ -315,6 +315,7 @@
             align-items: flex-start;
             gap:40px;
         }
+        
         .about-image {
             width: 280px;
             flex-shrink: 0;
@@ -325,7 +326,7 @@
         }
         
         .about-image img {
-          width: 100%;
+             width: 100%;
              height: auto;
              border-radius: var(--radius);
              box-shadow: var(--shadow);
@@ -334,12 +335,20 @@
         .about-image:hover img {
             transform: scale(1.03);
         }
-          /* For mobile responsiveness */
+
+        /* For mobile responsiveness */
 @media (max-width: 768px) {
     .about-content {
         flex-direction: column;
     }
+    
+    .about-image {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+    }
 }
+        
         /* Skills Section */
         .skills-container {
             display: grid;
@@ -1383,12 +1392,12 @@
                         <h3>Work Experience</h3>
                         <div class="experience-item">
                             <h4>Junior Software Developer</h4>
-                            <div class="experience-date">2023 - 2024</div>
+                            <div class="experience-date">2023 - Present</div>
                             <p>Developed and maintained web applications using JavaScript, Python, and Java. Collaborated with cross-functional teams to deliver high-quality software solutions.</p>
                         </div>
                         <div class="experience-item">
                             <h4>IT Support Technician</h4>
-                            <div class="experience-date">2021 - 2022</div>
+                            <div class="experience-date">2021 - Present</div>
                             <p>Provided technical support, maintained network infrastructure, and implemented security measures for various clients.</p>
                         </div>
                     </div>
@@ -1668,7 +1677,7 @@
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;
-            a.download = 'Kabelo Mushi Resume.pdf';
+            a.download = 'Kabelo_Mushi_Resume.pdf';
             document.body.appendChild(a);
             a.click();
             document.body.removeChild(a);
@@ -1829,8 +1838,3 @@
     </script>
 </body>
 </html>
-
-
-
-
-
