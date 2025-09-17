@@ -199,21 +199,18 @@
             color: var(--dark-bg);
             box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4);
         }
-
-        /* Section dividers */
-        .divider {
-            height: 100px;
-            background: linear-gradient(135deg, var(--dark-bg) 50%, transparent 50%);
-            transform: skewY(-2deg);
-            margin-top: -50px;
-            z-index: 1;
-            position: relative;
+         /* Zipline - Made straight */
+        .zip-line {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+            transform: translateY(-50%);
+            z-index: -1;
         }
-
-        .divider.reverse {
-            transform: skewY(2deg);
-        }
-
+        
         /* Sections */
         section {
             padding: 6rem 0;
@@ -1499,3 +1496,4 @@
     </script>
 </body>
 </html>
+
